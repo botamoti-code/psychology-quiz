@@ -36,8 +36,8 @@ function ResultContent() {
     message = "伸びしろたっぷり。心理学を知ると人間関係がもっと楽になりますよ。";
   }
 
-  const shareText = encodeURIComponent(`心理学クイズで10問中${score}問正解しました！\n評価：${evaluation}\n\nあなたも挑戦してみよう！\n#心理学クイズ #深層心理 #Webアプリ`);
-  const shareUrl = `https://twitter.com/intent/tweet?text=${shareText}`;
+  const shareText = encodeURIComponent(`心理学クイズで10問中${score}問正解しました！\n評価：${evaluation}\n\nあなたも挑戦してみよう！\nhttps://psychology-quiz-final.vercel.app/\n#心理学クイズ #深層心理 #Webアプリ`);
+  const shareUrl = `https://www.threads.net/intent/post?text=${shareText}`;
   const lineUrl = "https://lin.ee/placeholder"; // FIXME: LINE公式アカウントのURLに変更してください
 
   return (
@@ -70,9 +70,9 @@ function ResultContent() {
 
           <div className="space-y-4">
             <a href={shareUrl} target="_blank" rel="noopener noreferrer" className="block">
-              <Button fullWidth className="py-6 text-base bg-[#1DA1F2] hover:bg-[#1a8cd8] text-white rounded-xl flex items-center justify-center gap-2 border-transparent shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all" variant="secondary">
+              <Button fullWidth className="py-6 text-base bg-black hover:bg-zinc-800 text-white rounded-xl flex items-center justify-center gap-2 border-transparent shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all" variant="secondary">
                 <Share2 size={20} />
-                X（Twitter）で結果をシェア
+                Threadsで結果をシェア
               </Button>
             </a>
 
